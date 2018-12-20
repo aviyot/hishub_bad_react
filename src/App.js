@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './ListFun.js';
+import UserData from './Components/UserData/UserData';
+import BadSec  from './Components/BadSec';
+import ClientSec  from './Components/ClientSec';
+import ControlBtns  from './Components/ControlBtns';
+import MenuToData  from './Components/MenuToData';
+import OrderData  from './Components/OrderData.';
+import OrehSec  from './Components/OrehSec';
+import SheeritSec  from './Components/SheeritSec';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+    
+       // this.handleChange = this.handleChange.bind(this);
+
+
+    
+      }
+
+    render() {
+
+        return (
+
+            <div id="mainApp">
+              <UserData/>
+              <ControlBtns/>
+              <BadSec/>
+              <SheeritSec/>
+              <OrehSec/>
+              <ClientSec/>
+              <MenuToData/>
+              <OrderData/>
+            </div>
+
+        );
+    }
 }
 
 export default App;
