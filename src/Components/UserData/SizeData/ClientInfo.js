@@ -1,23 +1,34 @@
 import React from 'react';
+import ClientSec from '../../../Components/ClientSec';
 
 const clientInfo = () => {
 
-    
-    
 function showClientRecord() {
+
     document.getElementById("clientSec").style.display = "block";
 
     if (window.localStorage == null) {
 
-
     }
+
+  
+
     else {
         var clientListData = JSON.parse(localStorage.getItem("ClientListLocalData"));
 
-        if (clientListData == null) {
+        console.log(clientListData);
 
+        if (clientListData == null) {
+        
         }
         else {
+            
+            return(
+                <div>
+                  <ClientSec clientList = {clientListData}/>
+                  </div>
+                 )
+              /*
             var clientList = document.getElementById("clientList");
             clientList.innerHTML = '<tr><th>#</th><th>Name</th><th>Tel</><th>Adress</th></tr>';
 
@@ -39,6 +50,7 @@ function showClientRecord() {
                 trNode.appendChild(td2);
                 trNode.appendChild(td3);
                 clientList.appendChild(trNode);
+                */
             }
 
         }
@@ -46,12 +58,12 @@ function showClientRecord() {
 
         var trClientList = document.getElementById("clientList").querySelectorAll("tr");
 
-        for (i = 1; i < trClientList.length; i++) {
+        for (var i = 1; i < trClientList.length; i++) {
             trClientList[i].addEventListener("click", showSelectedClient);
         }
     }
 
-}
+
 
 function showSelectedClient(ev) {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const clientSec = () => {
+const clientSec = (props) => {
 
    
 return (
@@ -18,7 +18,7 @@ return (
     </div>
     <div id="EditShowClient">
         <input type="text" id="enterclientName" value="" placeholder="Client" />
-        <input type="number" id="enterTel" value="" placeholder="Tel " />
+        <input type="number" id="enterTel" value= {props.clientList[0].clientName} placeholder="Tel " />
         <input type="text " id="enterStreet" value="" placeholder="Street " />
         <br />
         <br />

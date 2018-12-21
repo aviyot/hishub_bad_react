@@ -5,6 +5,7 @@ const orehSec = () => {
 
     function deleteLastOreh() {
        /*
+       //test
         var lastNode =
             document.getElementById("listOreh");
         if (orehArray.length > 0) {
@@ -13,7 +14,6 @@ const orehSec = () => {
             totalOreh = totalOreh - orehArray.pop();
             document.getElementById("totalOreh").innerHTML = totalOreh / 1000;
         }
-        //
         */
     }
     
